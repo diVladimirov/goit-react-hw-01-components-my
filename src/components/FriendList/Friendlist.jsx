@@ -1,12 +1,13 @@
 import FriendListItem from './FriendListItem';
+import { Friendlisted } from './FriendList.styled';
 
 const Friendlist = ({ friends }) => {
   return (
-    <ul className="friend-list">
+    <Friendlisted>
       {friends.map(friend => (
         <FriendListItem key={friend.id} friendData={friend} />
       ))}
-    </ul>
+    </Friendlisted>
   );
 };
 

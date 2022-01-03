@@ -1,30 +1,39 @@
 import PropTypes from 'prop-types';
-import { Profiled, Avatar } from './Profile.styled';
+import {
+  Profiled,
+  Avatar,
+  Description,
+  Name,
+  TagLocation,
+  Stats,
+  Items,
+  Amount,
+} from './Profile.styled';
 
 const Profile = ({ user: { username, tag, location, avatar, stats } }) => {
   return (
     <Profiled>
-      <div className="description">
+      <Description>
         <Avatar src={avatar} alt="User avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+        <Name>{username}</Name>
+        <TagLocation>@{tag}</TagLocation>
+        <TagLocation>{location}</TagLocation>
+      </Description>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
+      <Stats>
+        <Items>
+          <span>Followers</span>
+          <Amount>{stats.followers}</Amount>
+        </Items>
+        <Items>
+          <span>Views</span>
+          <Amount>{stats.views}</Amount>
+        </Items>
+        <Items>
+          <span>Likes</span>
+          <Amount>{stats.likes}</Amount>
+        </Items>
+      </Stats>
     </Profiled>
   );
 };
