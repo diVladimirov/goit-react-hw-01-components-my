@@ -14,7 +14,13 @@ function App() {
     <>
       <Container>
         <GlobalStyle />
-        <Profile user={userdata} />
+        <Profile
+          username={userdata.username}
+          tag={userdata.tag}
+          location={userdata.location}
+          avatar={userdata.avatar}
+          stats={userdata.stats}
+        />
         <Statistics title="Upload stats" stats={staticticsdata} />
         <Statistics stats={staticticsdata} />
         <Friendlist friends={friendsdata} />

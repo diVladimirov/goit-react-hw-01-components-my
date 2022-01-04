@@ -3,7 +3,7 @@ import getRandomHexColor from './GetRandomHex';
 
 export const Statisticsed = styled.section`
   width: 700px;
-  margin: 0px auto;
+  margin: 15px auto;
   box-shadow: 2px 4px 8px 2px rgba(34, 60, 80, 0.2);
   border-radius: 5px;
   overflow: hidden;
